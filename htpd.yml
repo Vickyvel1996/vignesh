@@ -11,5 +11,5 @@
       state: started
    - name : copy file
      copy:
-      src: /root/selvaraj.html
+      src: /selvaraj.html
       dest: /var/www/html/
