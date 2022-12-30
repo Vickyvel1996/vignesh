@@ -1,0 +1,15 @@
+- hosts : webserver
+  become : True
+  tasks :
+   - name : apache
+     yum : 
+      name: httpd
+      state: present
+   - name : servive start
+     service:
+      name: httpd
+      state: started
+   - name : copy file
+     copy:
+      src: /root/selvaraj.html
+      dest: /var/www/html/
