@@ -1,2 +1,9 @@
 [webserver]
 172.31.44.43 ansible_user=ec2-user
+[windows]
+172.31.44.94
+ansible_user=Administrator
+ansible_password=satvat@123
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
