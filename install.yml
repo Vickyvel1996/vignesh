@@ -1,7 +1,16 @@
 - hosts: windows
-  become: True
+  gather_facts: true
   tasks:
-  - name: install namecoin
-    win_chocolatey:
-    name: namecoin
-    state: present
+   - name: Download the 7-Zip package
+     win_get_url:
+       url: https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B690820B7-43A0-08BF-5C3A-0A6A71E19028%7D%26lang%3Den%26browser%3D4%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable%26installdataindex%3Ddefaultbrowser/dl/chrome/install/googlechromestandaloneenterprise64.msi
+       dest: C:\temp\7z.ms - name: Download the 7-Zip package
+   - name: Ensure 7-Zip is installed through win_package
+     win_package:
+       path: C:\Users\googlechromestandaloneenterprise64.msi
+       state: present
+
+
+   
+
+   
