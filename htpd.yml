@@ -1,5 +1,5 @@
 ---
-- hosts : webserver
+- hosts : windows
   become : True
   tasks :
    - name : apache
